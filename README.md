@@ -1,170 +1,155 @@
-# 🤖 Digital Assistant Bot
+# <i><b>`Digital Assistant Bot`</b></i>
 
-A Telegram bot that helps users manage email and coordinate calendars - all through conversational AI.
-
----
-
-**⚠️ Handle Your Data Responsibly:**
-
-This bot interacts with your personal Gmail and Google Calendar data. Ensure your API keys and tokens are kept secure and that you understand the permissions granted to the bot. The developers are not responsible for any data mismanagement if you modify, self-host, or misuse the bot.
+A Telegram bot that helps users manage email and coordinate calendars - all through conversational AI.<br>
 
 ---
 
-## ✨ Features
+<samp>
 
-### 📧 Gmail Integration
-- List, read, send, and organize emails
-- Send emails with proper formatting
-- Apply labels for organization
-- Search through your inbox
-
-### 📅 Google Calendar Integration
-- List upcoming events
-- Create and update calendar events
-- Find available time slots
-- Schedule meetings with proper time management
-
-### 🤖 Email-Calendar Coordination
-- Process emails for meeting requests
-- Schedule calendar events from email content
-- Send confirmation emails for scheduled events
-- Help manage meeting-related correspondence
+> <b>[!IMPORTANT]</b><br>
+> <b>Handle Your Data Responsibly:</b> This bot interacts with your personal Gmail and Google Calendar data.<br>
+> Ensure your API keys and tokens are kept secure and that you understand the permissions granted to the bot.<br>
+> The developers are not responsible for any data mismanagement if you modify, self-host, or misuse the bot.
 
 ---
 
-## 🚀 Setup
+## ✨ <b>Features</b>
 
-**Important:** This bot requires API access to Google services (Gmail, Calendar) and a Telegram Bot Token. Ensure you have `google-credentials.json` (or have completed the manual Google API setup) and the `TELEGRAM_BOT_TOKEN` in your `.env` file. These are crucial for the bot to function.
+- <b>`Gmail Integration`</b>: List, read, send, and organize emails<br>
+  Send emails with proper formatting<br>
+  Apply labels for organization<br>
+  Search through your inbox
+- <b>`Google Calendar Integration`</b>: List upcoming events<br>
+  Create and update calendar events<br>
+  Find available time slots<br>
+  Schedule meetings with proper time management
+- <b>`Email-Calendar Coordination`</b>: Process emails for meeting requests<br>
+  Schedule calendar events from email content<br>
+  Send confirmation emails for scheduled events<br>
+  Help manage meeting-related correspondence
+
+---
+
+## 🌐 <b>Mastra Framework for Agents</b>
+
+This project uses the <a href="https://mastra.ai/" target="_blank"><b>Mastra framework</b></a> for building and orchestrating AI agents.<br>
+Mastra provides a robust foundation for designing, managing, and scaling conversational and tool-using agents, making it ideal for complex digital assistant applications like this one.
+
+---
+
+## 🚀 <b>Setup</b>
+
+<b>Important:</b> This bot requires API access to Google services (Gmail, Calendar) and a Telegram Bot Token.<br>
+Ensure you have <code>google-credentials.json</code> (or have completed the manual Google API setup) and the <code>TELEGRAM_BOT_TOKEN</code> in your <code>.env</code> file. These are crucial for the bot to function.
 
 ### Prerequisites
-- Node.js (v16+)
-- npm or pnpm
+- <code>Node.js</code> (v16+)
+- <code>npm</code> or <code>pnpm</code>
 - Google account for API access
-- Telegram bot token (from BotFather)
+- Telegram bot token (from <code>BotFather</code>)
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url> # Replace <repository-url> with the actual URL
-   cd Symptom-tracker-bot
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   pnpm install
-   ```
-
-3. Set up Google API access:
-   ```bash
-   npm run setup-google-apis
-   # or
-   pnpm run setup-google-apis
-   ```
+1. Clone the repository:<br>
+   <code>git clone &lt;repository-url&gt; # Replace &lt;repository-url&gt; with the actual URL<br>
+   cd Symptom-tracker-bot</code>
+2. Install dependencies:<br>
+   <code>npm install</code> <b>or</b> <code>pnpm install</code>
+3. Set up Google API access:<br>
+   <code>npm run setup-google-apis</code> <b>or</b> <code>pnpm run setup-google-apis</code><br>
    This will guide you through the process of setting up Google API credentials for Gmail and Calendar access.
-
-4. Create a `.env` file in the project root with your Telegram bot token:
-   ```env
-   TELEGRAM_BOT_TOKEN=your_telegram_bot_token_from_botfather
-   ```
-
-5. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   pnpm run dev
-   ```
+4. Create a <code>.env</code> file in the project root with your Telegram bot token:<br>
+   <code>TELEGRAM_BOT_TOKEN=your_telegram_bot_token_from_botfather</code>
+5. Start the development server:<br>
+   <code>npm run dev</code> <b>or</b> <code>pnpm run dev</code>
 
 ### Google API Setup (Manual)
 
-If the automatic setup script (`npm run setup-google-apis` or `pnpm run setup-google-apis`) doesn't work for you, follow these steps:
+If the automatic setup script (<code>npm run setup-google-apis</code> or <code>pnpm run setup-google-apis</code>) doesn't work for you, follow these steps:
 
-1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
-2. Create a new project or select an existing one.
-3. Navigate to **APIs & Services > Library**.
-4. Enable the **Gmail API** and **Google Calendar API**.
-5. Go to **APIs & Services > Credentials**.
-6. Create OAuth 2.0 credentials (select "Desktop application" type).
-7. Download the JSON file and save it as `google-credentials.json` in the project root directory.
+1. Go to the <a href="https://console.cloud.google.com/">Google Cloud Console</a>.<br>
+2. Create a new project or select an existing one.<br>
+3. Navigate to <b>APIs & Services &gt; Library</b>.<br>
+4. Enable the <b>Gmail API</b> and <b>Google Calendar API</b>.<br>
+5. Go to <b>APIs & Services &gt; Credentials</b>.<br>
+6. Create OAuth 2.0 credentials (select "Desktop application" type).<br>
+7. Download the JSON file and save it as <code>google-credentials.json</code> in the project root directory.
 
 ---
 
-## 🛠️ Usage
+## 🛠️ <b>Usage</b>
 
 ### Telegram Bot Commands
 
-The bot supports the following commands:
-
-- `/start` - Initialize the bot and see available agents
-- `/gmail` - Switch to the Gmail management agent
-- `/calendar` - Switch to the Google Calendar management agent
-- `/assistant` - Switch to the combined Email-Calendar assistant
-- `/help` - Display help information
+The bot supports the following commands:<br>
+- <b><code>/start</code></b> - Initialize the bot and see available agents<br>
+- <b><code>/gmail</code></b> - Switch to the Gmail management agent<br>
+- <b><code>/calendar</code></b> - Switch to the Google Calendar management agent<br>
+- <b><code>/assistant</code></b> - Switch to the combined Email-Calendar assistant<br>
+- <b><code>/help</code></b> - Display help information
 
 ### Examples
 
-Here are some examples of what you can do with the bot:
+Here are some examples of what you can do with the bot:<br>
 
-#### Gmail
-- "Show me my recent emails"
-- "Do I have any unread emails from [person]?"
-- "Send an email to [email address] about [topic]"
-- "Read email with subject [subject]"
+<b>Gmail</b><br>
+- "Show me my recent emails"<br>
+- "Do I have any unread emails from [person]?"<br>
+- "Send an email to [email address] about [topic]"<br>
+- "Read email with subject [subject]"<br>
 
-#### Calendar
-- "What meetings do I have today?"
-- "Schedule a meeting with [person] tomorrow at 2pm"
-- "Find available slots for a 30-minute meeting this week"
-- "Update my 2pm meeting to include [new details]"
+<b>Calendar</b><br>
+- "What meetings do I have today?"<br>
+- "Schedule a meeting with [person] tomorrow at 2pm"<br>
+- "Find available slots for a 30-minute meeting this week"<br>
+- "Update my 2pm meeting to include [new details]"<br>
 
-#### Email-Calendar Coordination
-- "Check my emails for meeting requests and schedule them"
-- "Send a confirmation email for my meeting with [person]"
-- "Find a good time for a meeting with [person] and send them an invitation"
-
----
-
-## 🏗️ Architecture
-
-The application is built using:
-
-- **Mastra.ai framework** for agent design
-- **Google API libraries** for Gmail and Calendar access
-- **Node Telegram Bot API** for messaging
-- **TypeScript** for type safety
-
-The bot features multiple specialized agents:
-- **Gmail Agent** - For email management
-- **Calendar Agent** - For calendar management
-- **Email-Calendar Agent** - For coordinated tasks between email and calendar
-
-Each agent has its own memory system to maintain context across conversations.
+<b>Email-Calendar Coordination</b><br>
+- "Check my emails for meeting requests and schedule them"<br>
+- "Send a confirmation email for my meeting with [person]"<br>
+- "Find a good time for a meeting with [person] and send them an invitation"<br>
 
 ---
 
-## 🔍 Troubleshooting
+## 🏗️ <b>Architecture</b>
 
-If you encounter issues with the Google API integration:
+The application is built using:<br>
+- <b><a href="https://mastra.ai/">Mastra.ai framework</a></b> for agent design and orchestration<br>
+- <b>Google API libraries</b> for Gmail and Calendar access<br>
+- <b>Node Telegram Bot API</b> for messaging<br>
+- <b>TypeScript</b> for type safety<br>
 
-- Ensure that both **Gmail API** and **Google Calendar API** are enabled in your Google Cloud project.
-- Check that you've completed the OAuth flow with the correct scopes (usually requested during setup-google-apis or manual setup).
-- Verify that `google-credentials.json` (for API client info) and `user-tokens.json` (for user OAuth tokens, usually generated after first auth) exist in your project root.
-- Try running the setup script again: `npm run setup-google-apis` or `pnpm run setup-google-apis`.
+The bot features multiple specialized agents:<br>
+- <b>Gmail Agent</b> - For email management<br>
+- <b>Calendar Agent</b> - For calendar management<br>
+- <b>Email-Calendar Agent</b> - For coordinated tasks between email and calendar<br>
+
+Each agent has its own memory system to maintain context across conversations.<br>
 
 ---
 
-## 💬 Feedback & Contributions
+## 🔍 <b>Troubleshooting</b>
 
-We'd love to hear your thoughts! If you encounter any issues, have suggestions for improvement, or want to contribute:
-- Please open an issue on the GitHub repository.
-- For contributions, feel free to fork the repository and submit a pull request.
+If you encounter issues with the Google API integration:<br>
+- Ensure that both <b>Gmail API</b> and <b>Google Calendar API</b> are enabled in your Google Cloud project.<br>
+- Check that you've completed the OAuth flow with the correct scopes (usually requested during setup-google-apis or manual setup).<br>
+- Verify that <code>google-credentials.json</code> (for API client info) and <code>user-tokens.json</code> (for user OAuth tokens, usually generated after first auth) exist in your project root.<br>
+- Try running the setup script again: <code>npm run setup-google-apis</code> or <code>pnpm run setup-google-apis</code>.<br>
 
-Your feedback and contributions are invaluable! 💌
+---
+
+## 💬 <b>Feedback & Contributions</b>
+
+We'd love to hear your thoughts! If you encounter any issues, have suggestions for improvement, or want to contribute:<br>
+- Please open an issue on the GitHub repository.<br>
+- For contributions, feel free to fork the repository and submit a pull request.<br>
+
+Your feedback and contributions are invaluable! 💌<br>
 
 ---
 
 ## License
 
-[MIT License](LICENSE)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+</samp>
