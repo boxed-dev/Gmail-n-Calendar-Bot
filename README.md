@@ -1,4 +1,4 @@
-# <i><b>`Digital Assistant Bot`</b></i>
+# <i><b>`Gmail-n-Calendar-Bot`</b></i>
 
 A Telegram bot that helps users manage email and coordinate calendars - all through conversational AI.<br>
 
