@@ -52,7 +52,7 @@ Ensure you have <code>google-credentials.json</code> (or have completed the manu
 
 1. Clone the repository:<br>
    <code>git clone https://github.com/boxed-dev/Gmail-n-Calendar-Bot.git 
-   cd Symptom-tracker-bot</code>
+   cd Gmail-n-Calendar-Bot</code>
 2. Install dependencies:<br>
    <code>npm install</code> <b>or</b> <code>pnpm install</code>
 3. Set up Google API access:<br>
